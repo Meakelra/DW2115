@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .header{
+            background-color: azure;
+        }
+        /* 结构伪类选择器 */
+        /* 
+        E:nth-child(n)      获取父标签的第几个子元素，如果获取的第n个子元素不符合 :前的类型，匹配失败
+        E:last-child        在父元素中的最后一个符合选择器E要求的子元素
+        E:first-child       在父元素中的第一个符合选择器E要求的子元素
+        E:only-child        在父元素中的有且只有一个符合选择器E要求的子元素
+        E:nth-last-child(n) 在父元素中的后数第n个符合选择器E要求的子元素
+         */
+        .header p:nth-child(3){  /*在父元素中的第n个符合选择器要求的子元素*/
+            background-color: hotpink;
+        }
+        .header p:last-child{  /*在父元素中的最后一个符合选择器要求的子元素*/
+            background-color: palegreen;
+        }
+        .header p:first-child{  /*在父元素中的第一个符合选择器要求的子元素*/
+            background-color: palegreen;
+        }
+        .header p:only-child{    /*在父元素中的有且只有一个符合选择器要求的子元素*/
+            background-color: khaki;
+        }
+        .header p:nth-last-child(3){    /*在父元素中的后数第n个符合选择器要求的子元素*/
+            background-color: rebeccapurple;
+
+        }
+
+        /* odd 奇数   even：偶数 */
+        .header p:nth-child(odd){
+            background-color: rosybrown;
+        }
+        .header p:nth-child(even){
+            background-color: forestgreen;
+        }
+        .only p:only-child{
+            background-color: palegreen;
+        }
+    </style>
+
+</head>
+<body>
+    
+
+    <!-- 文件命名：字母与数字的组合，不能以数字开头，不能出现特殊符号及汉字 -->
+    <!-- css基础选择器：
+            *
+            tag
+            .
+            #
+            :hover  
+            后代 空格
+            兄弟 + 
+            并集 ,
+            交集 
+            子代 >
+    -->
+        
+    <!-- 结构伪类选择器 -->
+    <div class="header">
+        <p>123</p>
+        <h1>456</h1>
+        <p>789</p>
+        <p>0000</p>
+        <h3>这即将是最后一个</h3>
+        <p>这是最后三个</p>
+        <p>这是最后二个</p>
+        <p>这是最后一个</p>
+    </div>
+
+    <div class="only">
+        <p>123456789</p>
+    </div>
+
+   
+</body>
+</html>

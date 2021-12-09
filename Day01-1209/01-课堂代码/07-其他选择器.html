@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* 
+        :first-letter  获取第一个字符
+        :first-line    获取第一行字符
+        */
+        .ad:first-letter{
+            color: red;
+        }
+        .ad:first-line{
+            color: yellow;
+        }
+        
+
+        /* 结构伪类选择器 */
+        /* 
+            :focus       获得焦点时
+            :disabled    标签不可用
+            :enabled     标签可用
+            :read-only   只读标签
+            :read-write  可读可写标签
+            :checked     选中状态下的标签
+        */
+        input:focus{
+            background-color: hotpink;
+        }
+        textarea:focus{
+            background-color: forestgreen;
+        }
+        input:disabled{
+            background-color: darkgoldenrod;
+        }
+        input:enabled{
+            background-color: tomato;
+        }
+        input:read-only{
+            background-color: thistle;
+        }
+        input:read-write{
+            background-color: palegoldenrod;
+        }
+
+        input:checked+span{
+            background-color: red;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <p class="ad">很多卡莎可是个快速地加入更多时间你的罚款港币的首付款广播电视方面表示的咖啡馆</p>
+
+    <input type="text">
+    <input type="text" disabled="disable">
+    <input type="text" readonly="readonly">
+    <input type="checkbox" checked="checked"><span>苹果</span>
+    <input type="checkbox"><span>香蕉</span>
+
+    <select name="" id="">
+        <option value="">12345</option>
+        <option value="" selected="selected">98765</option>
+    </select>
+
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+
+    <input type="text" value="1234" readonly>
+
+
+   
+
+</body>
+</html>

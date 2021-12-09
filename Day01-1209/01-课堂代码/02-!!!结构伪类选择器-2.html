@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* 
+        E:nth-of-type(n)       : 获取符合选择器要求的第 n 个 
+        E:first-of-type        : 符合选择器要求的第一个
+        E:last-of-type         ：符合选择器要求的最后一个
+        E:nth-last-of-type(n)  ：获取符合选择器要求的后数第 n 个
+        */
+    
+        .middle p:nth-of-type(2){
+            background-color: palegoldenrod;
+        }
+        .middle p:first-of-type{ 
+            background-color: yellow;
+        }
+        .middle p:last-of-type{
+            background-color: tomato;
+        }
+        .middle p:nth-last-of-type(3){
+            background-color: palevioletred;
+        }
+        .middle p:nth-of-type(odd){
+            background-color: hotpink;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="middle">
+        <p>123</p>
+        <h1>456</h1>
+        <p>789</p>
+        <p>0000</p>
+        <h3>这即将是最后一个</h3>
+        <p>这是最后三个</p>
+        <p>这是最后二个</p>
+        <p>这是最后一个</p>
+    </div> 
+
+</body>
+</html>

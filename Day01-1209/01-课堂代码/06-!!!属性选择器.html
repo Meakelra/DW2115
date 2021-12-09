@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        /* 属性选择器 */
+        /* 
+        选择器[属性名]       获取属性中带有属性名的选择器
+        选择器[属性=value]   获取属性中带有属性并且属性值value相同的选择器
+        选择器[属性*=value]  获取属性中带有属性名并且属性值包含value的选择器
+        选择器[属性^=value]  获取属性中带有属性名并且属性值以value开头的选择器
+        选择器[属性$=value]  获取属性中带有属性名并且属性值value结尾的选择器
+        选择器[属性|=value]  获取属性中带有属性名并且属性值以value-开头或属性值为value的选择器
+        选择器[属性~=value]  获取属性中带有属性名并且属性值包含value的选择器
+        */
+
+        p[class]{
+             /* background-color: violet; */
+        }
+        p[class][id]{
+            /* background-color: peachpuff; */
+        }
+        p[class='pclass']{
+            background-color: peru;
+        }
+        p[class*='class']{
+            /* background-color: powderblue; */
+        }
+        p[class^='p']{
+            /* background-color: peru; */
+        }
+        p[class$='p']{
+            /* background-color: fuchsia; */
+        }
+        p[class|='p']{
+            /* background-color: gold; */
+        }
+        p[class~='pclass']{
+            /* background-color: goldenrod; */
+        }
+
+        
+    </style>
+
+</head>
+<body>
+  
+
+    <!-- 属性选择器 -->
+    <p class="pclass div" id="p-id">123</p>
+    <p class="pclassdiv pclass">456</p>
+    <p class="p-class">789</p>
+    <p class="classp pclass">000</p>
+    <p class="p">111</p>
+    <p class="pclass">222</p>
+    <p class="pclasshw">33</p> 
+
+    
+   
+
+</body>
+</html>

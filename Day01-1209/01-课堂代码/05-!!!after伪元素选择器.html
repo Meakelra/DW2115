@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* 
+            :before 出现在标签的最前面
+            :after  出现在标签的最后面 
+        */
+
+        /* 如果写了一个冒号：叫伪类选择器  如果写了两个冒号：叫伪元素  但是在页面渲染时，无区别
+        可以当作一个标签使用*/
+        .box::before{
+            content: "before";
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: wheat;
+            position: relative;
+            top: 100px;
+            left: 100px;
+            
+        }
+        .box::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        
+        
+    </style>
+
+</head>
+<body>
+    
+
+    <!-- 伪元素选择器 -->
+    <div class="box">
+        <p>1234</p>
+        <p class="pp">123456789</p>
+        <p></p>
+        <p></p>
+        <p>4568</p>
+    </div> 
+
+   
+   
+
+</body>
+</html>

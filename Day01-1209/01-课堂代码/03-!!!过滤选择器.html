@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* 过滤选择器 */
+        /* :root  获取html标签 */
+        :root{
+            background-color: paleturquoise;
+        }
+        /* 选择器1:not(选择器2)  排除符合选择器2的选择器 */
+        p:not(.pp){
+            background-color: palegreen;
+        }
+        /* :empty 获取内容为空的标签元素 */
+        p:empty{
+            height: 7px;
+            background-color: plum;
+        }
+
+        
+    </style>
+
+</head>
+<body>
+   
+
+    <!-- 过滤选择器 -->
+    <div class="box">
+        <p>1234</p>
+        <p class="pp">123456789</p>
+        <p></p>
+        <p></p>
+        <p>4568</p>
+    </div> 
+    
+</body>
+</html>

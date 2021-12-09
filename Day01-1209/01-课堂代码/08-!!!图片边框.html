@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        div{
+            width: 270px;
+            height:270px;
+            background-color: yellow;
+
+            margin: 50px auto;
+
+            /* 边框 */
+            border-color: violet;
+            /* border-width: 20px; */
+            border-style: solid;
+
+            /* 图片边框 */
+            /* 
+                border-image-source: 边框图片路径 
+                border-image-slice:  边框的分割方式
+                border-image-width: 图片边框的宽度
+                border-image-repeat:是否平铺
+                 border-image-outset: 图片边框超出变量的距离
+            */
+            /* border-image-source: url(路径); */
+            border-image-source: url(img/border.png);
+            /* border-image-slice: 不带单位
+            赋值方式：
+            一个值：上下左右 
+            二个值: 上下  左右
+            三个值：上 左右 下
+            四个值：上 右 下 左
+            fill: 保留中间部分的内容*/
+            border-image-slice: 27 fill;
+            /* border-image-slice: 10 27; */
+            /* border-image-slice: 10 20 30; */
+            /* border-image-slice: 10 20 30 40; */
+            /* border-image-width 带单位
+            赋值方式：
+            一个值：上下左右 
+            二个值: 上下  左右
+            三个值：上 左右 下
+            四个值：上 右 下 左*/
+            border-image-width: 27px;
+            /* border-image-repeat: 
+            stretch 拉伸 默认
+            repeat: 平铺
+            round: 铺满
+            space: 间隙均分
+             */
+            border-image-repeat: space;
+            /* border-image-outset 带单位
+            赋值方式：
+            一个值：上下左右 
+            二个值: 上下  左右
+            三个值：上 左右 下
+            四个值：上 右 下 左*/
+            border-image-outset: 20px 30px 50px 50px;
+
+
+            
+        }
+
+    </style>
+
+</head>
+<body>
+    
+
+    <div>
+
+    </div>
+
+</body>
+</html>

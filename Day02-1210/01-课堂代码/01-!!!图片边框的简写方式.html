@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: khaki;
+            margin: 100px auto;
+
+            border-width: 27px;
+            border-style: solid;
+
+            /* border-image: source slice / width / outset  repeat; */
+            /* 注： slice与width与outset之间需要使用 / 分割 */
+            border-image: url(img/border.png) 27 fill / 20px 30px 40px 50px / 30px repeat;
+
+           
+        }
+    </style>
+</head>
+<body>
+    
+    <div></div>
+
+</body>
+</html>

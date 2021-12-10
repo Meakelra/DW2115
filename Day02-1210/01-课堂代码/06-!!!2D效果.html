@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: indianred;
+
+            margin: 30px auto;
+        }
+        div:nth-of-type(1){
+            /* margin-right: 60px; */
+            /* position: relative;
+            left: 200px; */
+
+            /* 2D：transform */
+
+            /* 2D位移:不影响标准文档流中的其他标签的位置
+            translateX() X轴的移动距离
+            translateY() Y轴的移动距离 
+            translate(X轴的移动距离, Y轴的移动距离)*/
+
+            transform: translate(200px, 100px);
+        }
+
+        div:nth-of-type(2){
+            transition: all 3s;
+
+            /* 设置基点（缩放、旋转） 
+            transform-origin: 水平方向的点 垂直方向的点
+            取值：
+            center: 中心点  默认值
+            top bottom  left right  值*/
+            transform-origin: 30px 10px;
+        }
+        div:nth-of-type(2):hover{
+            /* 2D：缩放  大于1：放大  小于1：缩小  等于1：不变
+            scaleX()  X轴的缩放
+            scaleY()  Y轴的缩放
+            scale(X轴的缩放 , Y轴的缩放) 如果只有一个值，X与Y同时缩放
+            */
+
+            transform: scale(-2);
+        }
+
+        div:nth-of-type(3){
+            transition: all 3s;
+
+            transform-origin: left top;
+        }
+
+        div:nth-of-type(3):hover{
+            /* 2D旋转  
+            rotate(角度) 单位：deg*/
+            transform: rotate(60deg);
+        }
+
+        div:nth-of-type(4){
+            transition: all 3s;
+            transform-origin: left top;
+        }
+        div:nth-of-type(4):hover{
+            /* 2D拉伸 
+            skewX()  X轴拉伸角度  单位：deg
+            skewY()  Y轴拉伸角度  单位：deg
+            skew(X轴拉伸角度, Y轴拉伸角度)  单位：deg
+             */
+            transform: skew(30deg, 50deg);
+        }
+
+        div:nth-of-type(5){
+            /* transition: all 3s; */
+            /* transform:可以组合使用， 从左向右依次实现2D效果 */
+            transform: translateX(100px) rotate(45deg);
+        }
+        
+        div:nth-of-type(6){
+            transform: rotate(45deg) translateX(100px);
+        }
+
+        .div5,.div8{
+            position: absolute;
+            top: 350px;
+            left: 200px;
+        }
+        .div6, .div7{
+            position: absolute;
+            top: 500px;
+            left: 200px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div>小菇凉1</div>
+    <div>小菇凉2</div>
+    <div>小菇凉3</div>
+    <div>小菇凉4</div>
+    <div class="div5">小菇凉5</div>
+    <div class="div6">小菇凉6</div>
+    <div class="div7">小菇凉7</div>
+    <div class="div8" style="background-color: royalblue;">111</div>
+    
+</body>
+</html>

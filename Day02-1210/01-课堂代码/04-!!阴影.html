@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            background-color: palegoldenrod;
+            margin: 50px auto;
+        }
+        div:nth-of-type(1){
+            /* 盒子阴影 */
+            /* box-shadow: h-offset v-offset blur spead color inset
+            h-offset v-offset:阴影的偏移量，相对盒子位置的偏移
+            blur：模糊程度
+            spead：阴影扩大的尺寸
+            color: 阴影颜色
+            inset：内阴影 默认是外阴影 */
+            box-shadow: 20px 40px 5px 30px gray;
+        }
+        div:nth-of-type(2){
+            box-shadow: -10px -30px;
+        }
+        div:nth-of-type(3){
+            box-shadow: 4px 8px 6px red inset;
+        }
+        div:nth-of-type(4){
+            /* 多阴影，不同阴影之间用 , 隔开 */
+            box-shadow: 0px 0px 5px red, 0px 0px 5px 8px greenyellow, 0px 0px 5px 16px khaki;
+        }
+
+        .p1{
+            font-size: 45px;
+            color: khaki;
+            /* 文字阴影 */
+            /* text-shadow: h-offset v-offset blur color 
+            h-offset v-offset:阴影的偏移量，相对盒子位置的偏移
+            blur：模糊程度
+            color: 阴影颜色 */
+            /* text-shadow: 10px 10px 5px green; */
+
+            /* 多阴影 */
+            text-shadow: 1px 1px 5px green, 2px 2px 5px red;
+        }
+
+        .p2{
+            font-size: 60px;
+            color: white;
+            /* 
+            -webkit-text-stroke : 文字描边
+            -webkit-text-stroke : width color;
+             */
+            -webkit-text-stroke: 1px green;
+        }
+
+        
+    </style>
+
+</head>
+<body>
+    
+
+    <!-- 盒子阴影 -->
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    
+    <p class="p1">采菇凉的小灰狼</p>
+
+    <p class="p2">采菇凉的小灰狼</p>
+
+
+</body>
+</html>

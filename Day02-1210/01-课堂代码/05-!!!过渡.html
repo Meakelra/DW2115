@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        div{
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+
+            background-color: palegoldenrod;
+
+            /* 过渡相关样式 */
+            /* transition-property : 设置添加过渡的样式 取值：样式名称 / all  必需*/
+            /* transition-duration : 设置过渡时间  单位：s  ms  必需*/
+            /* transition-delay : 过渡延迟时间 单位：s ms  默认值：0*/
+            /* transition-timing-function: 过渡曲线
+            取值：
+            ease：先慢后快  默认值
+            ease-in: 逐渐加速
+            ease-out: 逐渐减速
+            ease-in-out: 先加速再减速
+            linear：匀速 */
+
+            /* transition-property: all;
+            transition-duration: 2s;
+            transition-delay: 3s;
+            transition-timing-function: linear; */
+
+
+            /* transition 简写
+            transition: property duration timing-function delay
+            注：property、duration为必需参数，必需填写  timing-function、delay：可以省略不写
+            */
+            transition: all 3s linear 3s;
+            transition: all 3s;
+        }
+
+        div:hover{
+            width: 500px;
+            height: 500px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+
+    <div></div>
+
+</body>
+</html>

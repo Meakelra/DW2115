@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // 数字类型  Number
+        // 注：不管是基本数据类型的number，还是引用数据类型的number，在使用过程中没区别，在js解释器解释代码时，会将 基本数据类型 转为 引用数据类型。
+
+        // 一、创建数字
+        // 1、使用字面量创建数字,创建基本数据类型的number
+        var num1 = 10;
+        // 2、使用Number类型创建数字  new Number()；创建一个引用数据类型的Number
+        var num2 = new Number(30);
+
+        console.log(num1, num2);  // 10   30
+
+        console.log(typeof num1);  // number
+        console.log(typeof num2);  // object
+
+        // 二、Number 中的特殊值
+        // 1、最大值
+        console.log(Number.MAX_VALUE);
+        // 2、最小值
+        console.log(Number.MIN_VALUE);
+
+        console.log(Number.MAX_VALUE * 2);  // Infinity
+        // 3、无穷大 Infinity  无穷小 -Infinity
+        // 如果超出js能够计算的范围，默认返回 Infinity
+        console.log(typeof Infinity);  // number
+
+        console.log(15 / 0);  // Infinity
+        
+        console.log(20**600);  // Infinity
+
+        // 4、NaN  not a number  非数字
+        // 当其他数据类型转为 Number 时，转换失败，返回NaN
+        console.log(typeof NaN); // number
+        console.log("11" + 1);  // 111
+        console.log("11" - 1);  // 10
+
+        console.log("a" - 1);  // NaN   
+        console.log(undefined * 6);  // NaN
+
+        // 三、用于判断的方法
+        // 1、isNaN(value)  判断value是否为NaN，如果为NaN，返回true；否则返回false;系统会自动将value转为number进行判断
+        console.log(isNaN(5));  // false
+        console.log(isNaN("abc"));  // true
+        console.log(isNaN(NaN));  // true
+        // 2、isFinite(value) 判断一个value既不是Infinity也不是NaN，如果成立返回true；否则返回false 
+        console.log(isFinite(100));  // true
+        console.log(isFinite(Infinity));  // false
+        console.log(isFinite(NaN));  // false
+        console.log(isFinite("abc"));  // false
+
+
+        // 四、数字进制
+        var num1 = 10;  // 十进制   常规写法
+        var num2 = 010;  // 八进制   以0开头为八进制   // 8
+        var num3 = 0xa;  // 十六进制   以0x开头为十六进制  // 10
+        console.log(num1, num2, num3);  // 输出时，自动转为10进制
+
+
+
+
+
+        // var s = "sas";  // string
+        // var ss = new String("aaa");  // object
+    </script>
+
+</body>
+</html>

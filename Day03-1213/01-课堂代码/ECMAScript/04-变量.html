@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        // ES6
+        /*
+        命名规则：
+        - 由字母(A-Za-z)、数字(0-9)、下划线(_)、美元符号( $ )组成，如：usrAge, num01, _name
+        - 严格区分大小写。var app; 和 var App; 是两个变量
+        - 不能 以数字开头。  18age   是错误的
+        - 不能 是关键字、保留字。例如：var、for、while
+        - 变量名必须有意义。 MMD   BBD        nl  →  age 
+        - 遵守驼峰命名法。首字母小写，后面单词的首字母需要大写  ageAndName
+
+        关键字：是指 JS本身已经使用了的字，不能再用它们充当变量名、方法名。
+            包括：break、case、catch、continue、default、delete、do、else、finally、for、function、if、in、instanceof、new、return、switch、this、throw、try、typeof、var、void、while、with 等。
+        保留字：实际上就是预留的“关键字”，意思是现在虽然还不是关键字，但是未来可能会成为关键字，同样不能使用它们当变量名或方法名。
+            包括：boolean、byte、char、class、const、debugger、double、enum、export、extends、fimal、float、goto、implements、import、int、interface、long、mative、package、private、protected、public、short、static、super、synchronized、throws、transient、volatile 等。
+            注意：如果将保留字用作变量名或函数名，那么除非将来的浏览器实现了该保留字，否则很可能收不到任何错误消息。当浏览器将其实现后，该单词将被看做关键字，如此将出现关键字错误。
+        */
+
+        // 变量
+        // 1、声明变量 : var 变量名称
+        var age;
+        // 2、变量赋值  = 赋值符号
+        age = 99;
+        // 3、使用变量
+        console.log(age);  // 99
+
+
+        // 声明变量并赋值
+        var sex = "男";
+        console.log(sex); // 男
+        sex = 100;
+        console.log(sex); // 100
+
+        // 同时声明多个变量, 多个变量名之间用 , 分割
+        // var a;
+        // var b;
+        // var c;
+        var a,b,c;
+        a=5;
+        b=6;
+        c=7;
+
+        var d=3,e=6,f=7;
+        console.log(a,b,c,d,e,f);  // 5 6 7 3 6 7
+
+
+
+        // 常量   const
+        const money = "不到一个亿";
+        console.log(money);
+        // money = "2个亿";  // 常量不能重新赋值，报错
+
+
+        // console.log(result);  // 报错
+        // console.log(name);  // name 在 window 中存在，不建议变量名称为 name
+        // console.log(window);  //
+
+        
+
+
+        
+
+        
+
+
+
+
+    </script>
+
+</body>
+</html>

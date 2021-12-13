@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button>按钮</button>
+
+    <script>
+        // 输出语句
+
+        // 1、在控制台输出
+        console.log(1);
+        console.log(1,2,3);  // 同时输出多条数据，使用 , 隔开
+
+        // 2、提示框
+        alert("弹出框");  // 只有确定按钮
+        confirm("第二个弹出框");  // 有 确定 及 取消 两个按钮
+
+        // 3、document.write()  出现在页面上，不会自动换行
+        document.write("document---write");
+        document.write("第一个", "第二个");
+        document.write("<h3>标题3</h3>");  // 正规的标签会被解析成该标签的效果
+
+        document.writeln("第一个ln");
+        document.writeln("第二个ln");
+
+
+        // 输入语句
+        // 1、弹出框
+        // prompt 是一个函数，还函数有返回值，可以使用变量接收该返回值；如果点击确定，返回值为输入框中的字符串内容，如果点击取消，返回null
+        var res = prompt("请输入银行卡密码:");  // 有 确定 及 取消 两个按钮，还有一个 输入框
+        console.log(res);
+
+    </script>
+
+</body>
+</html>

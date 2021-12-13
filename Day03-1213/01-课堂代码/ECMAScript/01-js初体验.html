@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 2、内嵌式 -->
+    <script>
+        alert("head中的script");
+    </script>
+
+    <!-- 3、外部 js 文件 -->
+    <!-- 引入外部js文件  src="js文件的路径" -->
+    <!-- 注：如果script标签存在src属性，在script标签中的代码不再执行，只执行js文件中的内容 -->
+    <script src="index.js">
+        // alert("js-----js------js");  // 不会执行
+    </script>
+
+</head>
+<body>
+    
+
+    <!-- js初体验 -->
+
+    <!-- 1、直接嵌入在html标签中 -->
+    <!-- onclick 单击 -->
+    <button onclick="alert('你好，我来了!')">按钮</button>
+
+    <!-- 2、内嵌式  script标签 一个html文件中，可以同时存在多个script标签，执行顺序：从上向下依次执行，script标签可以放在html文件的任意位置-->
+    <script>
+        alert("script标签中的提示");
+    </script>
+
+    <!-- 3、外部 js 文件 -->
+    <script src="index.js"></script>
+
+</body>
+</html>

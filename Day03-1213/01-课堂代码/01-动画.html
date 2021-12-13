@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* 封装动画  @keyframes */
+        /* 
+            @keyframes 动画名称 {
+                
+            } 
+            from === 0%
+            to === 100%
+        */
+        @keyframes changeframes {
+            0%{
+                width: 100px;
+            }
+            100%{
+                width: 300px;
+            }
+        }
+
+        @keyframes move{
+            from{
+                transform: translate(0px, 0px);
+            }
+            25%{
+                transform: translate(200px, 0px);
+            }
+            50%{
+                transform: translate(200px, 200px);
+            }
+            75%{
+                transform: translate(0px, 200px);
+            }
+            to{
+                transform: translate(0px, 0px);
+            }
+        }
+
+        @keyframes rotate {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+        
+
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: burlywood;
+
+            margin: 100px auto;
+
+            /* 动画相关样式 */
+            /*  
+                animation-name: 动画名称 ; 动画名称 
+                animation-duration: 动画持续时间 默认值0s，如果不写该样式，动画不会开始
+                animation-timing-function: 动画过渡曲线
+                取值：
+                    ease：先慢后快  默认值
+                    ease-in: 逐渐加速
+                    ease-out: 逐渐减速
+                    ease-in-out: 先加速再减速
+                    linear：匀速 
+                animation-delay: 动画延迟时间  默认值：0s
+                animation-iteration-count: 动画执行次数 取值：数字 或 infinite（无限次）  默认值：1
+                animation-direction: 动画方向  normal：0%-100%    alternate:一次动画结束后下一次会反方向执行  默认值：normal
+             */
+            
+            /* animation-name: changeframes;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-delay: 3s;
+
+            animation-iteration-count: infinite;
+
+            animation-direction: alternate; */
+
+            /* 动画简写 */
+            /* animation: name duration timing-function delay iteration-count direction; */
+            /* animation: changeframes 3s ease-in 3s infinite alternate; */
+
+            /* animation: move 4s linear 3s infinite alternate; */
+
+            animation: rotate 4s linear 0s infinite normal;
+        }
+
+        div:hover{
+            /* animation-play-state 动画是否暂停  paused暂停  */
+            animation-play-state: paused;
+        }
+    </style>
+
+</head>
+<body>
+    <div>动画</div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        div{
+            width: 200px;
+            height: 200px;
+
+            border: 1px solid red;
+
+            margin: 10px auto;
+        }
+        /* 线性渐变 linear-gradient */
+        /* linear-gradient(red, yellow) : 默认从上向下渐变*/
+        /* linear-gradient(green, yellow, red, blue) 可以存在多种颜色渐变 */
+        /* linear-gradient(to bottom(默认值) / top / left / right, red, yellow)  设置渐变方向*/
+        /* linear-gradient(to bottom/top left/right, red, yellow)  设置渐变方向,设置对角方向*/
+        /* linear-gradient(20deg, red, yellow) 设置渐变角度 ，第一个参数写角度，单位： deg */
+        /* linear-gradient(red 20%, green 80%) 设置颜色所占比例 */
+
+        /* 径向渐变： radial-gradient */
+        /* radial-gradient(red, yellow, green) 渐变，默认从中心点向外渐变 */
+        /* background-image: radial-gradient(circle,red, yellow, green); 设置渐变方式（圆形或椭圆） */
+        /* background-image: radial-gradient(at 30px 50px, red, yellow, green); 设置渐变中心点
+            设置某一个边的正中间为 中心点 at left/top/bottom/right 
+            设置某一个角 中心点 at left/right top/bottom 
+            设置任意一个值 为中心点   at 水平方向数值 垂直方向数值
+        */
+        div:nth-child(1){
+            background-color: forestgreen;
+            /* 渐变色在渲染时会变成图片，所以使用 background-image 设置渐变色 */
+            
+            /* background-image: linear-gradient(red, green); */
+            background: linear-gradient(red, yellow);
+        }
+        div:nth-child(2){
+            background-image: linear-gradient(green, yellow, red, blue);
+        }
+        div:nth-child(3){
+            /* 方位
+            to bottom(默认值) / top / left / right */
+            background-image: linear-gradient(to right, red, yellow);
+        }
+        div:nth-child(4){
+            /* 对角
+            to top/bottom left/right */
+            background-image: linear-gradient(to bottom left, red, yellow);
+        }
+        div:nth-child(5){
+            /* 角度 */
+            background-image: linear-gradient(10deg, red, yellow, blue);
+        }
+        div:nth-child(6){
+            /* 所占比例：
+                例如以下示例：为从20%开始渐变，到80%结束渐变；0-20%为纯红色，80%-100%为纯绿色；20%-80%之间为渐变色
+                如果写数值：该数值的位置为纯色，其他为渐变色，第一个数值为开始渐变的位置，最后一个数值为结束渐变的位置
+             */
+            /* background-image: linear-gradient(red 20%, green 80%); */
+            background-image: linear-gradient(to left,red 30px, green 120px, yellow 190px);
+        }
+
+        div:nth-child(7){
+            background-image: radial-gradient(red, yellow, green);
+        }
+        div:nth-child(8){
+            width: 400px;
+            /* 设置径向渐变的渐变方式：当盒子长方形时，默认以椭圆方式渐变 ellipse; 如果设置为 circle，为圆形渐变  */
+            background-image: radial-gradient(ellipse,red, yellow, green);
+        }
+        div:nth-child(9){
+            /* 设置渐变中心点 */
+            /* 设置某一个边的正中间为 中心点 at left/top/bottom/right */
+            /* 设置某一个角 中心点 at left/right top/bottom */
+            /* 设置任意一个值 为中心点   at 水平方向数值 垂直方向数值*/
+            /* background-image: radial-gradient(at bottom, red, yellow, green); */
+            /* background-image: radial-gradient(at bottom left, red, yellow, green); */
+            background-image: radial-gradient(at 30px 50px,red, yellow, green);
+        }
+        div:nth-child(10){
+            background-image: radial-gradient(yellow 5px, red 70px, green 140px);
+        }
+
+        p{
+            font-size: 60px;
+            /* color: forestgreen; */
+            /* 第一步：设置背景图片为渐变色 */
+            background-image: linear-gradient(red, green);
+            /* 第二步：扣文字 */
+            /* 将除文字以外的内容切割 */
+            -webkit-background-clip: text;
+            /* 文字填充色：transparent */
+            -webkit-text-fill-color: transparent;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- <p>小蘑菇与小鸭子</p> -->
+    
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+
+</body>
+</html>
